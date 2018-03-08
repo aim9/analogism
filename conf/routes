@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /gart/genpic                controllers.Gart.index()
+POST    /gart/genpic                controllers.Gart.genPic()
+GET     /gencode                    controllers.Gart.getGenCode()
+POST    /gencode                    controllers.Gart.genCode()
+GET     /genpoly                    controllers.Gart.getGenPoly()
+
+GET     /gart/                           controllers.Gart.setQuestion()
+POST    /gart/topologyselect             controllers.Gart.topologySelect()
+POST    /gart/rootpolyselect             controllers.Gart.rootPolySelect()
+POST    /gart/transpolyselect            controllers.Gart.transPolySelect()
+POST    /gart/disturbselect              controllers.Gart.disturbSelect()
+POST    /gart/answertoposelect           controllers.Gart.AnswerTopologySelect()
+POST    /gart/answerrootselect           controllers.Gart.answerRootSelect()
+POST    /gart/savequestion               controllers.Gart.saveQuestion()
+GET     /gart/edit                       controllers.Gart.edit()
+POST    /gart/edit                       controllers.Gart.edit()
+GET     /gart/random                     controllers.Gart.randomget()
+POST    /gart/random                     controllers.Gart.randompost()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
